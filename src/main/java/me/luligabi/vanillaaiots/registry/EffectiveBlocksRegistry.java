@@ -13,14 +13,6 @@ public class EffectiveBlocksRegistry {
 
     public static Set<Block> effectiveBlocks = new HashSet<>();
 
-
-    /*public EffectiveBlocksUnifier() {
-        effectiveBlocks.addAll(pickaxeEffectiveBlocks);
-        effectiveBlocks.addAll(axeEffectiveBlocks);
-        effectiveBlocks.addAll(shovelEffectiveBlocks);
-        effectiveBlocks.addAll(hoeEffectiveBlocks);
-    }*/
-
     public static void register() { //this is extra messy, but I couldn't find a better alternative
         effectiveBlocks.addAll(pickaxeEffectiveBlocks);
         effectiveBlocks.addAll(axeEffectiveBlocks);
