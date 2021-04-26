@@ -37,13 +37,13 @@ public class AiotToolItem extends MiningToolItem {
     }
 
     @Override
-    public boolean isEffectiveOn(BlockState state) { //TODO: Add snow block and layer to effective list.
+    public boolean isEffectiveOn(BlockState state) {
         int miningLevel = this.getMaterial().getMiningLevel();
         if (!state.isOf(Blocks.OBSIDIAN) && !state.isOf(Blocks.CRYING_OBSIDIAN) && !state.isOf(Blocks.NETHERITE_BLOCK) && !state.isOf(Blocks.RESPAWN_ANCHOR) && !state.isOf(Blocks.ANCIENT_DEBRIS)) {
             if (!state.isOf(Blocks.DIAMOND_BLOCK) && !state.isOf(Blocks.DIAMOND_ORE) && !state.isOf(Blocks.EMERALD_ORE) && !state.isOf(Blocks.EMERALD_BLOCK) && !state.isOf(Blocks.GOLD_BLOCK) && !state.isOf(Blocks.GOLD_ORE) && !state.isOf(Blocks.REDSTONE_ORE)) {
                 if (!state.isOf(Blocks.IRON_BLOCK) && !state.isOf(Blocks.IRON_ORE) && !state.isOf(Blocks.LAPIS_BLOCK) && !state.isOf(Blocks.LAPIS_ORE)) {
                     Material material = state.getMaterial();
-                    return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE);
+                    return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.SNOW) || state.isOf(Blocks.SNOW_BLOCK) || state.isOf(Blocks.COBWEB);
                 } else {
                     return miningLevel >= 1;
                 }
@@ -130,8 +130,9 @@ public class AiotToolItem extends MiningToolItem {
         Material material = state.getMaterial();
         if(state.isOf(Blocks.COBWEB)) {
             return 15.0F;
+        } else {
+            return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ||
+                    woodenBlocks.contains(material) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
         }
-        return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ||
-                woodenBlocks.contains(material) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
     }
 }
