@@ -8,8 +8,9 @@
     "Luligabi"
   ],
   "contact": {
-    "website": "dummy",
-    "repo": "dummy"
+    "website": "https://www.curseforge.com/minecraft/mc-mods/vanilla-aiots",
+    "repo": "https://github.com/Luligabi1/VanillaAIOTS",
+    "issues": "https://github.com/Luligabi1/VanillaAIOTS/issues"
   },
   "license": "Apache-2.0",
   "icon": "assets/vanillaaiots/icon.png",
