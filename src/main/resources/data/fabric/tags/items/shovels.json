@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "vanillaaiots:wooden_aiot",
-    "vanillaaiots:stone_aiot",
-    "vanillaaiots:iron_aiot",
-    "vanillaaiots:golden_aiot",
-    "vanillaaiots:diamond_aiot",
-    "vanillaaiots:netherite_aiot"
+    "basicaiots:wooden_aiot",
+    "basicaiots:stone_aiot",
+    "basicaiots:iron_aiot",
+    "basicaiots:golden_aiot",
+    "basicaiots:diamond_aiot",
+    "basicaiots:netherite_aiot"
   ]
 }

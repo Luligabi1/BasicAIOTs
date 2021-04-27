@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.luligabi.basicaiots.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AxeItemAccessor",
+    "HoeItemAccessor",
+    "PickaxeItemAccessor",
+    "ShovelItemAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
