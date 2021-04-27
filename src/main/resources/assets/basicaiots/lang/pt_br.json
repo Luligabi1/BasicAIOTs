@@ -1,0 +1,10 @@
+{
+  "item.basicaiots.wooden_aiot": "AIOT de madeira",
+  "item.basicaiots.stone_aiot": "AIOT de pedra",
+  "item.basicaiots.golden_aiot": "AIOT de ouro",
+  "item.basicaiots.iron_aiot": "AIOT de ferro",
+  "item.basicaiots.diamond_aiot": "AIOT de diamante",
+  "item.basicaiots.netherite_aiot": "AIOT de netherita",
+
+  "itemGroup.basicaiots.item_group": "Basic AIOT's"
+}
