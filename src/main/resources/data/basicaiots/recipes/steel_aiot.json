@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:steel_sword"
+    },
+    {
+      "tag": "tools:steel_pickaxe"
+    },
+    {
+      "tag": "tools:steel_axe"
+    },
+    {
+      "tag": "tools:steel_shovel"
+    },
+    {
+      "tag": "tools:steel_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:steel_aiot",
+    "count": 1
+  }
+}

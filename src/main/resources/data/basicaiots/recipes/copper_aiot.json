@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:copper_sword"
+    },
+    {
+      "tag": "tools:copper_pickaxe"
+    },
+    {
+      "tag": "tools:copper_axe"
+    },
+    {
+      "tag": "tools:copper_shovel"
+    },
+    {
+      "tag": "tools:copper_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:copper_aiot",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:lead_sword"
+    },
+    {
+      "tag": "tools:lead_pickaxe"
+    },
+    {
+      "tag": "tools:lead_axe"
+    },
+    {
+      "tag": "tools:lead_shovel"
+    },
+    {
+      "tag": "tools:lead_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:lead_aiot",
+    "count": 1
+  }
+}

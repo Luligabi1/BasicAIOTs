@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:bronze_sword"
+    },
+    {
+      "tag": "tools:bronze_pickaxe"
+    },
+    {
+      "tag": "tools:bronze_axe"
+    },
+    {
+      "tag": "tools:bronze_shovel"
+    },
+    {
+      "tag": "tools:bronze_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:bronze_aiot",
+    "count": 1
+  }
+}

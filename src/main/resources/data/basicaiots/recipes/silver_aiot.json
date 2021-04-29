@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:silver_sword"
+    },
+    {
+      "tag": "tools:silver_pickaxe"
+    },
+    {
+      "tag": "tools:silver_axe"
+    },
+    {
+      "tag": "tools:silver_shovel"
+    },
+    {
+      "tag": "tools:silver_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:silver_aiot",
+    "count": 1
+  }
+}
