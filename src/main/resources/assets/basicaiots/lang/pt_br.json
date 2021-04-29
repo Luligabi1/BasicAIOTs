@@ -6,5 +6,13 @@
   "item.basicaiots.diamond_aiot": "AIOT de diamante",
   "item.basicaiots.netherite_aiot": "AIOT de netherita",
 
+  "item.basicaiots.tin_aiot": "AIOT de Estanho",
+  "item.basicaiots.copper_aiot": "AIOT de Cobre",
+  "item.basicaiots.silver_aiot": "AIOT de Prata",
+  "item.basicaiots.steel_aiot": "AIOT de Aço",
+  "item.basicaiots.lead_aiot": "AIOT de Chumbo",
+
+  "item.basicaiots.bronze_aiot": "AIOT de Bronze",
+
   "itemGroup.basicaiots.item_group": "Basic AIOT's"
 }
