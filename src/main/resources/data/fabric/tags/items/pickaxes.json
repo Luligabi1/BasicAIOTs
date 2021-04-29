@@ -12,6 +12,9 @@
     "basicaiots:silver_aiot",
     "basicaiots:bronze_aiot",
     "basicaiots:steel_aiot",
-    "basicaiots:lead_aiot"
+    "basicaiots:lead_aiot",
+    "basicaiots:ruby_aiot",
+    "basicaiots:sapphire_aiot",
+    "basicaiots:peridot_aiot"
   ]
 }
