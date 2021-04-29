@@ -6,6 +6,12 @@
     "basicaiots:iron_aiot",
     "basicaiots:golden_aiot",
     "basicaiots:diamond_aiot",
-    "basicaiots:netherite_aiot"
+    "basicaiots:netherite_aiot",
+    "basicaiots:tin_aiot",
+    "basicaiots:copper_aiot",
+    "basicaiots:silver_aiot",
+    "basicaiots:bronze_aiot",
+    "basicaiots:steel_aiot",
+    "basicaiots:lead_aiot"
   ]
 }

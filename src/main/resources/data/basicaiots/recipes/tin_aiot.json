@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:tin_sword"
+    },
+    {
+      "tag": "tools:tin_pickaxe"
+    },
+    {
+      "tag": "tools:tin_axe"
+    },
+    {
+      "tag": "tools:tin_shovel"
+    },
+    {
+      "tag": "tools:tin_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:tin_aiot",
+    "count": 1
+  }
+}
