@@ -1,35 +1,35 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.toolmaterial.techreborn;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class SteelToolMaterial implements ToolMaterial {
+public class PeridotToolMaterial implements ToolMaterial {
 
-    public static SteelToolMaterial INSTANCE = new SteelToolMaterial();
+    public static PeridotToolMaterial INSTANCE = new PeridotToolMaterial();
 
     @Override
     public int getMiningLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
     public int getDurability() {
-        return 1500;
+        return 750;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4.4F;
+        return 7.0F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 1.0F;
+        return 1.5F;
     }
 
     @Override
     public int getEnchantability() {
-        return 14;
+        return 12;
     }
 
     @Override

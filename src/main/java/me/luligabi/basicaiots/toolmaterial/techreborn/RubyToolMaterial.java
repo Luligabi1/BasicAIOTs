@@ -1,11 +1,11 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.toolmaterial.techreborn;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class SilverToolMaterial implements ToolMaterial {
+public class RubyToolMaterial implements ToolMaterial {
 
-    public static SilverToolMaterial INSTANCE = new SilverToolMaterial();
+    public static RubyToolMaterial INSTANCE = new RubyToolMaterial();
 
     @Override
     public int getMiningLevel() {
@@ -14,22 +14,22 @@ public class SilverToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 500;
+        return 750;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 5.0F;
+        return 6.0F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 1.0F;
+        return 1.5F;
     }
 
     @Override
     public int getEnchantability() {
-        return 24;
+        return 10;
     }
 
     @Override

@@ -1,39 +1,39 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.toolmaterial.indrev;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class LeadToolMaterial implements ToolMaterial {
+public class TinToolMaterial implements ToolMaterial {
 
-    public static LeadToolMaterial INSTANCE = new LeadToolMaterial();
+    public static TinToolMaterial INSTANCE = new TinToolMaterial();
 
     @Override
     public int getMiningLevel() {
-        return 4;
+        return 1;
     }
 
     @Override
     public int getDurability() {
-        return 900;
+        return 200;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 3.0F;
+        return 4.0F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 2.0F;
+        return 1.0F;
     }
 
     @Override
     public int getEnchantability() {
-        return 8;
+        return 14;
     }
 
     @Override
     public Ingredient getRepairIngredient() { //TODO: Add repair item
         return null;
-    }
+    } //TODO: Add repair item
 }

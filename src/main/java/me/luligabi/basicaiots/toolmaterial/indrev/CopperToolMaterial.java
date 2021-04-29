@@ -1,11 +1,11 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.toolmaterial.indrev;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class BronzeToolMaterial implements ToolMaterial {
+public class CopperToolMaterial implements ToolMaterial {
 
-    public static BronzeToolMaterial INSTANCE = new BronzeToolMaterial();
+    public static CopperToolMaterial INSTANCE = new CopperToolMaterial();
 
     @Override
     public int getMiningLevel() {
@@ -14,22 +14,22 @@ public class BronzeToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 375;
+        return 300;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 7.0F;
+        return 4.4F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 2.25F;
+        return 1.0F;
     }
 
     @Override
     public int getEnchantability() {
-        return 6;
+        return 14;
     }
 
     @Override

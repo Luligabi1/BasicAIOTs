@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "basicaiots",
   "version": "${version}",
-  "name": "Basic AIOT's",
+  "name": "Basic AIOTs",
   "description": "Adds AIOTs - All in One Tools - into the game.",
   "authors": [
     "Luligabi"
@@ -29,6 +29,7 @@
     "minecraft": "1.16.5"
   },
   "suggests": {
-    "indrev": "*"
+    "indrev": "*",
+    "techreborn": "*"
   }
 }

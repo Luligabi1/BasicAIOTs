@@ -1,35 +1,35 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.toolmaterial.techreborn;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class CopperToolMaterial implements ToolMaterial {
+public class SapphireToolMaterial implements ToolMaterial {
 
-    public static CopperToolMaterial INSTANCE = new CopperToolMaterial();
+    public static SapphireToolMaterial INSTANCE = new SapphireToolMaterial();
 
     @Override
     public int getMiningLevel() {
-        return 2;
+        return 3;
     }
 
     @Override
     public int getDurability() {
-        return 300;
+        return 1000;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4.4F;
+        return 7.0F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 1.0F;
+        return 1.5F;
     }
 
     @Override
     public int getEnchantability() {
-        return 14;
+        return 12;
     }
 
     @Override
