@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:sapphire_sword"
+    },
+    {
+      "tag": "tools:sapphire_pickaxe"
+    },
+    {
+      "tag": "tools:sapphire_axe"
+    },
+    {
+      "tag": "tools:sapphire_shovel"
+    },
+    {
+      "tag": "tools:sapphire_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:sapphire_aiot",
+    "count": 1
+  }
+}

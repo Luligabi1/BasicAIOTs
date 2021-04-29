@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:ruby_sword"
+    },
+    {
+      "tag": "tools:ruby_pickaxe"
+    },
+    {
+      "tag": "tools:ruby_axe"
+    },
+    {
+      "tag": "tools:ruby_shovel"
+    },
+    {
+      "tag": "tools:ruby_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:ruby_aiot",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tools:peridot_sword"
+    },
+    {
+      "tag": "tools:peridot_pickaxe"
+    },
+    {
+      "tag": "tools:peridot_axe"
+    },
+    {
+      "tag": "tools:peridot_shovel"
+    },
+    {
+      "tag": "tools:peridot_hoe"
+    }
+  ],
+  "result": {
+    "item": "basicaiots:peridot_aiot",
+    "count": 1
+  }
+}
