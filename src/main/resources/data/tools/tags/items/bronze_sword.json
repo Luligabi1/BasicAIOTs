@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_sword"
+    "indrev:bronze_sword",
+    "techreborn:bronze_sword"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_axe"
+    "indrev:bronze_axe",
+    "techreborn:bronze_axe"
   ]
 }

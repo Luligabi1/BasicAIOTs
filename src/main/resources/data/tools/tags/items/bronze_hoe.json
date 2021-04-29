@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_hoe"
+    "indrev:bronze_hoe",
+    "techreborn:bronze_hoe"
   ]
 }
