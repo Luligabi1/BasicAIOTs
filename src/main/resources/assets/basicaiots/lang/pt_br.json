@@ -6,13 +6,17 @@
   "item.basicaiots.diamond_aiot": "AIOT de diamante",
   "item.basicaiots.netherite_aiot": "AIOT de netherita",
 
-  "item.basicaiots.tin_aiot": "AIOT de Estanho",
-  "item.basicaiots.copper_aiot": "AIOT de Cobre",
-  "item.basicaiots.silver_aiot": "AIOT de Prata",
-  "item.basicaiots.steel_aiot": "AIOT de Aço",
-  "item.basicaiots.lead_aiot": "AIOT de Chumbo",
+  "item.basicaiots.tin_aiot": "AIOT de estanho",
+  "item.basicaiots.copper_aiot": "AIOT de cobre",
+  "item.basicaiots.silver_aiot": "AIOT de prata",
+  "item.basicaiots.steel_aiot": "AIOT de aço",
+  "item.basicaiots.lead_aiot": "AIOT de chumbo",
 
-  "item.basicaiots.bronze_aiot": "AIOT de Bronze",
+  "item.basicaiots.ruby_aiot": "AIOT de rubi",
+  "item.basicaiots.sapphire_aiot": "AIOT de safira",
+  "item.basicaiots.peridot_aiot": "AIOT de peridoto",
+
+  "item.basicaiots.bronze_aiot": "AIOT de bronze",
 
   "itemGroup.basicaiots.item_group": "Basic AIOTs"
 }
