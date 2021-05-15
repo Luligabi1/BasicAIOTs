@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "techreborn:peridot_pickaxe"
+    { "id": "techreborn:peridot_pickaxe", "required": false }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:tin_hoe"
+    { "id": "indrev:tin_hoe", "required": false }
   ]
 }
