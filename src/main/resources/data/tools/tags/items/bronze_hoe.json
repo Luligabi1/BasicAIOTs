@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_hoe",
-    "techreborn:bronze_hoe"
+    { "id":"indrev:bronze_hoe", "required": false },
+    { "id":"techreborn:bronze_hoe", "required": false }
   ]
 }

@@ -1,7 +1,8 @@
 {
   "replace": false,
+  "required": false,
   "values": [
-    "indrev:bronze_axe",
-    "techreborn:bronze_axe"
+    { "id":"indrev:bronze_axe", "required": false },
+    { "id":"techreborn:bronze_axe", "required": false }
   ]
 }

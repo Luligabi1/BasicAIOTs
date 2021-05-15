@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "techreborn:ruby_hoe"
+    { "id": "techreborn:ruby_hoe", "required": false }
   ]
 }

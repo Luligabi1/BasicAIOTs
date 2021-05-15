@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:lead_sword"
+    { "id":"indrev:lead_sword", "required": false }
   ]
 }

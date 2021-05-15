@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:silver_pickaxe"
+    { "id": "indrev:silver_pickaxe", "required": false },
+    { "id": "bewitchment:silver_pickaxe", "required": false }
   ]
 }

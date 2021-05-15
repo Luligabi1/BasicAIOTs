@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_pickaxe",
-    "techreborn:bronze_pickaxe"
+    { "id":"indrev:bronze_pickaxe", "required": false },
+    { "id":"techreborn:bronze_pickaxe", "required": false }
   ]
 }

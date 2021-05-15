@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "indrev:bronze_shovel",
-    "techreborn:bronze_spade"
+    { "id":"indrev:bronze_shovel", "required": false },
+    { "id":"techreborn:bronze_spade", "required": false }
   ]
 }
