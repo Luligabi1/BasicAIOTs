@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ToolRegistry {
 
-    public static void register() {
+    public static void init() {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "wooden_aiot"), WOODEN_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "stone_aiot"), STONE_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "golden_aiot"), GOLDEN_AIOT);
@@ -28,7 +28,6 @@ public class ToolRegistry {
     public static void indrevRegister() {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "tin_aiot"), TIN_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "copper_aiot"), COPPER_AIOT);
-        Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "silver_aiot"), SILVER_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "steel_aiot"), STEEL_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "lead_aiot"), LEAD_AIOT);
     }
