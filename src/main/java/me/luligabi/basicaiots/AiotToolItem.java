@@ -12,18 +12,17 @@ import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 import java.util.Map;
-import java.util.Set;
 
 public class AiotToolItem extends MiningToolItem {
 
     // Axe
-    private static final Set<Material> woodenBlocks = AxeItemAccessor.getWoodenBlocks();
     private static final Map<Block, Block> strippedBlocks = AxeItemAccessor.getStrippedBlocks();
 
     // Shovel
@@ -32,27 +31,8 @@ public class AiotToolItem extends MiningToolItem {
     // Hoe
     private static final Map<Block, BlockState> tilledBlocks = HoeItemAccessor.getTilledBlocks();
 
-    public AiotToolItem(float attackDamage, float attackSpeed, ToolMaterial material, Set<Block> effectiveBlocks, Settings settings) {
-        super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
-    }
-
-    @Override
-    public boolean isEffectiveOn(BlockState state) {
-        int miningLevel = this.getMaterial().getMiningLevel();
-        if (!state.isOf(Blocks.OBSIDIAN) && !state.isOf(Blocks.CRYING_OBSIDIAN) && !state.isOf(Blocks.NETHERITE_BLOCK) && !state.isOf(Blocks.RESPAWN_ANCHOR) && !state.isOf(Blocks.ANCIENT_DEBRIS)) {
-            if (!state.isOf(Blocks.DIAMOND_BLOCK) && !state.isOf(Blocks.DIAMOND_ORE) && !state.isOf(Blocks.EMERALD_ORE) && !state.isOf(Blocks.EMERALD_BLOCK) && !state.isOf(Blocks.GOLD_BLOCK) && !state.isOf(Blocks.GOLD_ORE) && !state.isOf(Blocks.REDSTONE_ORE)) {
-                if (!state.isOf(Blocks.IRON_BLOCK) && !state.isOf(Blocks.IRON_ORE) && !state.isOf(Blocks.LAPIS_BLOCK) && !state.isOf(Blocks.LAPIS_ORE)) {
-                    Material material = state.getMaterial();
-                    return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.SNOW) || state.isOf(Blocks.SNOW_BLOCK) || state.isOf(Blocks.COBWEB);
-                } else {
-                    return miningLevel >= 1;
-                }
-            } else {
-                return miningLevel >= 2;
-            }
-        } else {
-            return miningLevel >= 3;
-        }
+    public AiotToolItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
+        super(attackDamage, attackSpeed, material, BlockTags.PICKAXE_MINEABLE, settings);
     }
 
     @Override
@@ -63,7 +43,7 @@ public class AiotToolItem extends MiningToolItem {
         Block block = blockState.getBlock();
         PlayerEntity playerEntity = context.getPlayer();
 
-        if(strippedBlocks.containsKey(block)) { // Axe action (strip log)
+        if(strippedBlocks.containsKey(block)) { // Axe action (strip log) //TODO: Add copper oxidation action
             Block logBlock = strippedBlocks.get(blockState.getBlock());
 
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
@@ -90,14 +70,14 @@ public class AiotToolItem extends MiningToolItem {
                             if (!world.isClient()) {
                                 world.syncWorldEvent(null, 1009, blockPos, 0);
                             }
-                            CampfireBlock.extinguish(world, blockPos, blockState);
+                            CampfireBlock.extinguish(playerEntity, world, blockPos, blockState);
                             blockState3 = blockState.with(CampfireBlock.LIT, false);
                         }
 
                         if (blockState3 != null) {
                             if (!world.isClient) {
                                 world.setBlockState(blockPos, blockState3, 11);
-                                context.getStack().damage(1, (LivingEntity)playerEntity, ((p) -> p.sendToolBreakStatus(context.getHand())));
+                                context.getStack().damage(1, (LivingEntity) playerEntity, ((p) -> p.sendToolBreakStatus(context.getHand())));
                             }
 
                             return ActionResult.success(world.isClient());
@@ -107,7 +87,7 @@ public class AiotToolItem extends MiningToolItem {
                     }
                 }
             } else {
-                if (tilledBlocks.containsKey(block)) { // Hoe action (hoe dirt)
+                if (tilledBlocks.containsKey(block)) { // Hoe action (hoe dirt) //TODO: Fix crash here
                     if (context.getSide() != Direction.DOWN && world.getBlockState(blockPos.up()).isAir()) {
                         BlockState hoeableBlocks = tilledBlocks.get(world.getBlockState(blockPos).getBlock());
                         if (hoeableBlocks != null) {
@@ -131,8 +111,7 @@ public class AiotToolItem extends MiningToolItem {
         if(state.isOf(Blocks.COBWEB)) {
             return 15.0F;
         } else {
-            return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ||
-                    woodenBlocks.contains(material) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
+            return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
         }
     }
 }

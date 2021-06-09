@@ -2,11 +2,12 @@
   "required": true,
   "minVersion": "0.8",
   "package": "me.luligabi.basicaiots.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
     "AxeItemAccessor",
     "HoeItemAccessor",
-    "PickaxeItemAccessor",
+    "MiningToolAccessor",
+    "MiningToolItemMixin",
     "ShovelItemAccessor"
   ],
   "client": [
