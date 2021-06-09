@@ -1,5 +1,6 @@
 package me.luligabi.basicaiots;
 
+import com.mojang.datafixers.util.Pair;
 import me.luligabi.basicaiots.mixin.AxeItemAccessor;
 import me.luligabi.basicaiots.mixin.HoeItemAccessor;
 import me.luligabi.basicaiots.mixin.ShovelItemAccessor;
@@ -19,12 +20,14 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class AiotToolItem extends MiningToolItem {
     
     private static final Map<Block, Block> strippedBlocks = AxeItemAccessor.getStrippedBlocks();
     private static final Map<Block, BlockState> pathStates = ShovelItemAccessor.getPathStates();
-    private static final Map<Block, BlockState> tilledBlocks = HoeItemAccessor.getTilledBlocks();
+    private static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> tilledBlocks = HoeItemAccessor.getTilledBlocks();
 
     public AiotToolItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
         super(attackDamage, attackSpeed, material, BlockTags.PICKAXE_MINEABLE, settings);
@@ -52,7 +55,7 @@ public class AiotToolItem extends MiningToolItem {
         }
         if(playerEntity != null) {
             if (playerEntity.isSneaking()) {
-                if(pathStates.containsKey(block)) { // Shovel actions (extinguish campfire/create path)
+                if (pathStates.containsKey(block)) { // Shovel actions (extinguish campfire/create path)
                     if (context.getSide() == Direction.DOWN) {
                         return ActionResult.PASS;
                     } else {
@@ -82,18 +85,19 @@ public class AiotToolItem extends MiningToolItem {
                     }
                 }
             } else {
-                if (tilledBlocks.containsKey(block)) { // Hoe action (hoe dirt) //TODO: Fix crash here
-                    if (context.getSide() != Direction.DOWN && world.getBlockState(blockPos.up()).isAir()) {
-                        BlockState hoeableBlocks = tilledBlocks.get(world.getBlockState(blockPos).getBlock());
-                        if (hoeableBlocks != null) {
-                            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            if (!world.isClient()) {
-                                world.setBlockState(blockPos, hoeableBlocks, 11);
-                                context.getStack().damage(1, (LivingEntity) playerEntity, ((p) -> p.sendToolBreakStatus(context.getHand())));
-                            }
+                Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>> pair = tilledBlocks.get(world.getBlockState(blockPos).getBlock());
+                if (pair != null) {
+                    Predicate<ItemUsageContext> predicate = pair.getFirst();
+                    Consumer<ItemUsageContext> consumer = pair.getSecond();
+                    if (predicate.test(context)) {
+                        world.playSound(playerEntity, blockPos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                        if (!world.isClient) {
+                            consumer.accept(context);
+                            context.getStack().damage(1, (LivingEntity) playerEntity, ((p) -> p.sendToolBreakStatus(context.getHand())));
                         }
+                        return ActionResult.success(world.isClient);
                     }
-                    return ActionResult.success(world.isClient());
+                    return ActionResult.PASS;
                 }
             }
         }

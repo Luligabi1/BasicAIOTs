@@ -18,7 +18,6 @@ public class BasicAiots implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        EffectiveBlocksRegistry.register();
         ToolRegistry.register();
 
         if(FabricLoader.getInstance().isModLoaded("indrev")) {
