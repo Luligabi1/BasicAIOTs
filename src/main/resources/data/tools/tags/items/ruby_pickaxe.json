@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "techreborn:ruby_pickaxe"
+    {"id": "techreborn:ruby_pickaxe", "required": false}
   ]
 }

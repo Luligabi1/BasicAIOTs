@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:tin_axe"
+    {"id": "indrev:tin_axe", "required": false}
   ]
 }

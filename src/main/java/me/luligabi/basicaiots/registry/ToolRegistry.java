@@ -2,6 +2,9 @@ package me.luligabi.basicaiots.registry;
 
 import me.luligabi.basicaiots.AiotToolItem;
 import me.luligabi.basicaiots.BasicAiots;
+import me.luligabi.basicaiots.item.IndustrialRevolutionTechRebornToolItem;
+import me.luligabi.basicaiots.item.IndustrialRevolutionToolItem;
+import me.luligabi.basicaiots.item.TechRebornToolItem;
 import me.luligabi.basicaiots.toolmaterial.BronzeToolMaterial;
 import me.luligabi.basicaiots.toolmaterial.indrev.*;
 import me.luligabi.basicaiots.toolmaterial.techreborn.PeridotToolMaterial;
@@ -51,27 +54,27 @@ public class ToolRegistry {
 
     public static ToolItem DIAMOND_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.DIAMOND, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem NETHERITE_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.NETHERITE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem NETHERITE_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.NETHERITE, new Item.Settings().group(BasicAiots.ITEM_GROUP).fireproof());
 
     // Industrial Revolution
-    public static ToolItem TIN_AIOT = new AiotToolItem(3, -2.4F, TinToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem TIN_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, TinToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem COPPER_AIOT = new AiotToolItem(3, -2.4F, CopperToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem COPPER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, CopperToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem SILVER_AIOT = new AiotToolItem(3, -2.4F, SilverToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem SILVER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, SilverToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem STEEL_AIOT = new AiotToolItem(3, -2.4F, SteelToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem STEEL_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, SteelToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem LEAD_AIOT = new AiotToolItem(3, -2.4F, LeadToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem LEAD_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, LeadToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
     // Tech Reborn
-    public static ToolItem RUBY_AIOT = new AiotToolItem(3, -2.4F, RubyToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem RUBY_AIOT = new TechRebornToolItem(3, -2.4F, RubyToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem SAPPHIRE_AIOT = new AiotToolItem(3, -2.4F, SapphireToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem SAPPHIRE_AIOT = new TechRebornToolItem(3, -2.4F, SapphireToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem PERIDOT_AIOT = new AiotToolItem(3, -2.4F, PeridotToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem PERIDOT_AIOT = new TechRebornToolItem(3, -2.4F, PeridotToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
     // Other
-    public static ToolItem BRONZE_AIOT = new AiotToolItem(3, -2.4F, BronzeToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem BRONZE_AIOT = new IndustrialRevolutionTechRebornToolItem(3, -2.4F, BronzeToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
 }

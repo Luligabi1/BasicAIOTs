@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "techreborn:sapphire_spade"
+    {"id": "techreborn:sapphire_spade", "required": false}
   ]
 }

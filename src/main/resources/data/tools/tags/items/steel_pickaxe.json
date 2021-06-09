@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:steel_pickaxe"
+    {"id": "indrev:steel_pickaxe", "required": false}
   ]
 }
