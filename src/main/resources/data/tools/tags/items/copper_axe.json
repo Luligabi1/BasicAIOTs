@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:copper_axe"
+    {"id": "indrev:copper_axe", "required": false}
   ]
 }

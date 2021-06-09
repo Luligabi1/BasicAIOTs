@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:steel_sword"
+    {"id": "indrev:steel_sword", "required": false}
   ]
 }

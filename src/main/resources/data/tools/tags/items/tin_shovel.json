@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "indrev:tin_shovel"
+    {"id": "indrev:tin_shovel", "required": false}
   ]
 }

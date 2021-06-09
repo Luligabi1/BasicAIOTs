@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "techreborn:peridot_hoe"
+    {"id": "techreborn:peridot_hoe", "required": false}
   ]
 }
