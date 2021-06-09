@@ -1,6 +1,5 @@
 package me.luligabi.basicaiots;
 
-import me.luligabi.basicaiots.registry.EffectiveBlocksRegistry;
 import me.luligabi.basicaiots.registry.ToolRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;

@@ -21,14 +21,9 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class AiotToolItem extends MiningToolItem {
-
-    // Axe
+    
     private static final Map<Block, Block> strippedBlocks = AxeItemAccessor.getStrippedBlocks();
-
-    // Shovel
     private static final Map<Block, BlockState> pathStates = ShovelItemAccessor.getPathStates();
-
-    // Hoe
     private static final Map<Block, BlockState> tilledBlocks = HoeItemAccessor.getTilledBlocks();
 
     public AiotToolItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
