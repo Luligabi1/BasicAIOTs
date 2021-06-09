@@ -18,5 +18,9 @@
 
   "item.basicaiots.bronze_aiot": "AIOT de bronze",
 
-  "itemGroup.basicaiots.item_group": "Basic AIOTs"
+  "item.basicaiots.indrev.tooltip": "Adicionado usando Industrial Revolution.",
+  "item.basicaiots.techreborn.tooltip": "Adicionado usando Tech Reborn.",
+  "item.basicaiots.indrev_techreborn.tooltip": "Adicionado usando Industrial Revolution ou Tech Reborn.",
+
+  "itemGroup.basicaiots.item_group": "Basic AIOTs",
 }
