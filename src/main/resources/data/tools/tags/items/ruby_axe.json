@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "techreborn:ruby_axe", "required": false }
+    "techreborn:ruby_axe"
   ]
 }

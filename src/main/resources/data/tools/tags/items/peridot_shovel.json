@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "techreborn:peridot_spade", "required": false }
+    "techreborn:peridot_spade"
   ]
 }

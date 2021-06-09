@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    { "id":"indrev:bronze_sword", "required": false },
-    { "id":"techreborn:bronze_sword", "required": false }
+    "indrev:bronze_sword",
+    "techreborn:bronze_sword"
   ]
 }

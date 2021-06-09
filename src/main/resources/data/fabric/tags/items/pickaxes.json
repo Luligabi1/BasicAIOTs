@@ -1,21 +1,20 @@
 {
   "replace": false,
   "values": [
-    { "id": "basicaiots:wooden_aiot", "required": true },
-    { "id": "basicaiots:stone_aiot", "required": true },
-    { "id": "basicaiots:iron_aiot", "required": true },
-    { "id": "basicaiots:golden_aiot", "required": true },
-    { "id": "basicaiots:diamond_aiot", "required": true },
-    { "id": "basicaiots:netherite_aiot", "required": true },
-
-    { "id": "basicaiots:tin_aiot", "required": false },
-    { "id": "basicaiots:copper_aiot", "required": false },
-    { "id": "basicaiots:silver_aiot", "required": false },
-    { "id": "basicaiots:bronze_aiot", "required": false },
-    { "id": "basicaiots:steel_aiot", "required": false },
-    { "id": "basicaiots:lead_aiot", "required": false },
-    { "id": "basicaiots:ruby_aiot", "required": false },
-    { "id": "basicaiots:sapphire_aiot", "required": false },
-    { "id": "basicaiots:peridot_aiot", "required": false }
+    "basicaiots:wooden_aiot",
+    "basicaiots:stone_aiot",
+    "basicaiots:iron_aiot",
+    "basicaiots:golden_aiot",
+    "basicaiots:diamond_aiot",
+    "basicaiots:netherite_aiot",
+    "basicaiots:tin_aiot",
+    "basicaiots:copper_aiot",
+    "basicaiots:silver_aiot",
+    "basicaiots:bronze_aiot",
+    "basicaiots:steel_aiot",
+    "basicaiots:lead_aiot",
+    "basicaiots:ruby_aiot",
+    "basicaiots:sapphire_aiot",
+    "basicaiots:peridot_aiot"
   ]
 }

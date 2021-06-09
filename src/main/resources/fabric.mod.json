@@ -30,7 +30,6 @@
   },
   "suggests": {
     "indrev": "*",
-    "techreborn": "*",
-    "bewitchment": "*"
+    "techreborn": "*"
   }
 }

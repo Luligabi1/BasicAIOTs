@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id":"indrev:copper_pickaxe", "required": false }
+    "indrev:copper_pickaxe"
   ]
 }

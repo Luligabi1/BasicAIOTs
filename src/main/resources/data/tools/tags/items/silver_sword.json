@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "indrev:silver_sword", "required": false },
-    { "id": "bewitchment:silver_sword", "required": false }
+    "indrev:silver_sword"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id":"indrev:copper_shovel", "required": false }
+    "indrev:copper_shovel"
   ]
 }

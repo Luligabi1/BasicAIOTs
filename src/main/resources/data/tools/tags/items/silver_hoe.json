@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "indrev:silver_hoe", "required": false },
-    { "id": "bewitchment:silver_hoe", "required": false }
+    "indrev:silver_hoe"
   ]
 }
