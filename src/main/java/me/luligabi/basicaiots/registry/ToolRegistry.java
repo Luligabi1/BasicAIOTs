@@ -51,7 +51,7 @@ public class ToolRegistry {
 
     public static ToolItem DIAMOND_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.DIAMOND, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem NETHERITE_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.NETHERITE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem NETHERITE_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.NETHERITE, new Item.Settings().group(BasicAiots.ITEM_GROUP).fireproof());
 
     // Industrial Revolution
     public static ToolItem TIN_AIOT = new AiotToolItem(3, -2.4F, TinToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));

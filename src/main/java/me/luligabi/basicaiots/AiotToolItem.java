@@ -1,16 +1,16 @@
 package me.luligabi.basicaiots;
 
+import com.google.common.collect.BiMap;
 import com.mojang.datafixers.util.Pair;
 import me.luligabi.basicaiots.mixin.AxeItemAccessor;
 import me.luligabi.basicaiots.mixin.HoeItemAccessor;
 import me.luligabi.basicaiots.mixin.ShovelItemAccessor;
+import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.MiningToolItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
@@ -20,6 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -41,17 +42,35 @@ public class AiotToolItem extends MiningToolItem {
         Block block = blockState.getBlock();
         PlayerEntity playerEntity = context.getPlayer();
 
-        if(strippedBlocks.containsKey(block)) { // Axe action (strip log) //TODO: Add copper oxidation action
-            Block logBlock = strippedBlocks.get(blockState.getBlock());
-
+        Optional<BlockState> optional = getStrippedState(blockState);
+        Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(blockState);
+        Optional<BlockState> optional3 = Optional.ofNullable((Block)((BiMap) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map((waxedBlock) -> waxedBlock.getStateWithProperties(blockState));
+        ItemStack itemStack = context.getStack();
+        Optional<BlockState> optional4 = Optional.empty();
+        if (optional.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            if (!world.isClient()) {
-                world.setBlockState(blockPos, logBlock.getDefaultState().with(PillarBlock.AXIS, blockState.get(PillarBlock.AXIS)), 11);
-                if (playerEntity != null) {
-                    context.getStack().damage(1, (LivingEntity)playerEntity, ((p) -> p.sendToolBreakStatus(context.getHand())));
-                }
+            optional4 = optional;
+        } else if (optional2.isPresent()) {
+            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.syncWorldEvent(playerEntity, 3005, blockPos, 0);
+            optional4 = optional2;
+        } else if (optional3.isPresent()) {
+            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.syncWorldEvent(playerEntity, 3004, blockPos, 0);
+            optional4 = optional3;
+        }
+
+        if (optional4.isPresent()) {
+            if (playerEntity instanceof ServerPlayerEntity) {
+                Criteria.ITEM_USED_ON_BLOCK.test((ServerPlayerEntity)playerEntity, blockPos, itemStack);
             }
-            return ActionResult.success(world.isClient());
+
+            world.setBlockState(blockPos, optional4.get(), 11);
+            if (playerEntity != null) {
+                itemStack.damage(1, playerEntity, (p) -> p.sendToolBreakStatus(context.getHand()));
+            }
+
+            return ActionResult.success(world.isClient);
         }
         if(playerEntity != null) {
             if (playerEntity.isSneaking()) {
@@ -112,5 +131,9 @@ public class AiotToolItem extends MiningToolItem {
         } else {
             return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
         }
+    }
+
+    private Optional<BlockState> getStrippedState(BlockState state) {
+        return Optional.ofNullable(strippedBlocks.get(state.getBlock())).map((block) -> block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
     }
 }
