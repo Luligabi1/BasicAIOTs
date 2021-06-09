@@ -1,5 +1,6 @@
 package me.luligabi.basicaiots;
 
+import me.luligabi.basicaiots.registry.EffectiveBlocksRegistry;
 import me.luligabi.basicaiots.registry.ToolRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -18,6 +19,7 @@ public class BasicAiots implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        EffectiveBlocksRegistry.register();
         ToolRegistry.register();
 
         if(FabricLoader.getInstance().isModLoaded("indrev")) {
