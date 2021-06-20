@@ -5,11 +5,8 @@ import me.luligabi.basicaiots.BasicAiots;
 import me.luligabi.basicaiots.item.IndustrialRevolutionTechRebornToolItem;
 import me.luligabi.basicaiots.item.IndustrialRevolutionToolItem;
 import me.luligabi.basicaiots.item.TechRebornToolItem;
-import me.luligabi.basicaiots.toolmaterial.BronzeToolMaterial;
-import me.luligabi.basicaiots.toolmaterial.indrev.*;
-import me.luligabi.basicaiots.toolmaterial.techreborn.PeridotToolMaterial;
-import me.luligabi.basicaiots.toolmaterial.techreborn.RubyToolMaterial;
-import me.luligabi.basicaiots.toolmaterial.techreborn.SapphireToolMaterial;
+import me.luligabi.basicaiots.toolmaterial.IndRevToolMaterials;
+import me.luligabi.basicaiots.toolmaterial.TechRebornToolMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterials;
@@ -27,7 +24,7 @@ public class ToolRegistry {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "netherite_aiot"), NETHERITE_AIOT);
     }
 
-    // Register Industrial Revolution's AIOTs if the mod is present
+    // Register Industrial Revolution's AIOTs
     public static void indrevRegister() {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "tin_aiot"), TIN_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "copper_aiot"), COPPER_AIOT);
@@ -36,7 +33,7 @@ public class ToolRegistry {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "lead_aiot"), LEAD_AIOT);
     }
 
-    // Register Tech Reborn's AIOTs if the mod is present
+    // Register Tech Reborn's AIOTs
     public static void techrebornRegister() {
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "ruby_aiot"), RUBY_AIOT);
         Registry.register(Registry.ITEM, new Identifier(BasicAiots.MOD_ID, "sapphire_aiot"), SAPPHIRE_AIOT);
@@ -57,24 +54,24 @@ public class ToolRegistry {
     public static ToolItem NETHERITE_AIOT = new AiotToolItem(3, -2.4F, ToolMaterials.NETHERITE, new Item.Settings().group(BasicAiots.ITEM_GROUP).fireproof());
 
     // Industrial Revolution
-    public static ToolItem TIN_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, TinToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem TIN_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, IndRevToolMaterials.TIN, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem COPPER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, CopperToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem COPPER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, IndRevToolMaterials.COPPER, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem SILVER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, SilverToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem STEEL_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, IndRevToolMaterials.STEEL, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem STEEL_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, SteelToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem LEAD_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, IndRevToolMaterials.LEAD, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem LEAD_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, LeadToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem SILVER_AIOT = new IndustrialRevolutionToolItem(3, -2.4F, IndRevToolMaterials.SILVER, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
     // Tech Reborn
-    public static ToolItem RUBY_AIOT = new TechRebornToolItem(3, -2.4F, RubyToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem RUBY_AIOT = new TechRebornToolItem(3, -2.4F, TechRebornToolMaterials.RUBY, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem SAPPHIRE_AIOT = new TechRebornToolItem(3, -2.4F, SapphireToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem SAPPHIRE_AIOT = new TechRebornToolItem(3, -2.4F, TechRebornToolMaterials.SAPPHIRE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
-    public static ToolItem PERIDOT_AIOT = new TechRebornToolItem(3, -2.4F, PeridotToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem PERIDOT_AIOT = new TechRebornToolItem(3, -2.4F, TechRebornToolMaterials.PERIDOT, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
     // Other
-    public static ToolItem BRONZE_AIOT = new IndustrialRevolutionTechRebornToolItem(3, -2.4F, BronzeToolMaterial.INSTANCE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
+    public static ToolItem BRONZE_AIOT = new IndustrialRevolutionTechRebornToolItem(3, -2.4F, IndRevToolMaterials.BRONZE, new Item.Settings().group(BasicAiots.ITEM_GROUP));
 
 }
