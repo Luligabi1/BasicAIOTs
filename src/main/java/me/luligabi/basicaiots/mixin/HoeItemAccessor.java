@@ -14,8 +14,8 @@ import java.util.function.Predicate;
 @Mixin(HoeItem.class)
 public interface HoeItemAccessor {
 
-    @Accessor("TILLED_BLOCKS")
-    static Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> getTilledBlocks() {
+    @Accessor("TILLING_ACTIONS")
+    static Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> getTillingActions() {
         throw new AssertionError();
     }
 }

@@ -1,6 +1,6 @@
 package me.luligabi.basicaiots.mixin;
 
-import me.luligabi.basicaiots.AiotToolItem;
+import me.luligabi.basicaiots.item.AiotToolItem;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;

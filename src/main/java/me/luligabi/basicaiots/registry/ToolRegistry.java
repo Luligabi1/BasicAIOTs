@@ -1,6 +1,6 @@
 package me.luligabi.basicaiots.registry;
 
-import me.luligabi.basicaiots.AiotToolItem;
+import me.luligabi.basicaiots.item.AiotToolItem;
 import me.luligabi.basicaiots.BasicAiots;
 import me.luligabi.basicaiots.item.IndustrialRevolutionTechRebornToolItem;
 import me.luligabi.basicaiots.item.IndustrialRevolutionToolItem;

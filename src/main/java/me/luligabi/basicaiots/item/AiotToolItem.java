@@ -1,4 +1,4 @@
-package me.luligabi.basicaiots;
+package me.luligabi.basicaiots.item;
 
 import com.google.common.collect.BiMap;
 import com.mojang.datafixers.util.Pair;
@@ -28,7 +28,7 @@ public class AiotToolItem extends MiningToolItem {
     
     private static final Map<Block, Block> strippedBlocks = AxeItemAccessor.getStrippedBlocks();
     private static final Map<Block, BlockState> pathStates = ShovelItemAccessor.getPathStates();
-    private static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> tilledBlocks = HoeItemAccessor.getTilledBlocks();
+    private static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> tilledBlocks = HoeItemAccessor.getTillingActions();
 
     public AiotToolItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
         super(attackDamage, attackSpeed, material, BlockTags.PICKAXE_MINEABLE, settings);
@@ -62,7 +62,7 @@ public class AiotToolItem extends MiningToolItem {
 
         if (optional4.isPresent()) {
             if (playerEntity instanceof ServerPlayerEntity) {
-                Criteria.ITEM_USED_ON_BLOCK.test((ServerPlayerEntity)playerEntity, blockPos, itemStack);
+                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity)playerEntity, blockPos, itemStack);
             }
 
             world.setBlockState(blockPos, optional4.get(), 11);

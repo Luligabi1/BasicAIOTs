@@ -1,6 +1,5 @@
 package me.luligabi.basicaiots.item;
 
-import me.luligabi.basicaiots.AiotToolItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -19,6 +18,6 @@ public class IndustrialRevolutionTechRebornToolItem extends AiotToolItem {
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("item.basicaiots.indrev_techreborn.tooltip").formatted(Formatting.BLUE, Formatting.ITALIC, Formatting.BOLD));
+        tooltip.add(new TranslatableText("item.basicaiots.indrev_techreborn.tooltip").formatted(Formatting.BLUE, Formatting.ITALIC));
     }
 }
