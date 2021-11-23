@@ -8,8 +8,8 @@
     "Luligabi"
   ],
   "contact": {
-    "website": "https://www.curseforge.com/minecraft/mc-mods/basic-aiots",
-    "repo": "https://github.com/Luligabi1/BasicAIOTs",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/basic-aiots",
+    "sources": "https://github.com/Luligabi1/BasicAIOTs",
     "issues": "https://github.com/Luligabi1/BasicAIOTs/issues"
   },
   "license": "Apache-2.0",
