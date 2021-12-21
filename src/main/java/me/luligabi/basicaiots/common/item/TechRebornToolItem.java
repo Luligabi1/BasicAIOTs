@@ -1,4 +1,4 @@
-package me.luligabi.basicaiots.item;
+package me.luligabi.basicaiots.common.item;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;

@@ -1,4 +1,4 @@
-package me.luligabi.basicaiots.toolmaterial;
+package me.luligabi.basicaiots.common.toolmaterial;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;

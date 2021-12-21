@@ -1,4 +1,4 @@
-package me.luligabi.basicaiots.item;
+package me.luligabi.basicaiots.common.item;
 
 import com.google.common.collect.BiMap;
 import com.mojang.datafixers.util.Pair;

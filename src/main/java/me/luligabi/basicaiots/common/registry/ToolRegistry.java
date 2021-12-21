@@ -1,12 +1,12 @@
-package me.luligabi.basicaiots.registry;
+package me.luligabi.basicaiots.common.registry;
 
-import me.luligabi.basicaiots.item.AiotToolItem;
-import me.luligabi.basicaiots.BasicAiots;
-import me.luligabi.basicaiots.item.IndustrialRevolutionTechRebornToolItem;
-import me.luligabi.basicaiots.item.IndustrialRevolutionToolItem;
-import me.luligabi.basicaiots.item.TechRebornToolItem;
-import me.luligabi.basicaiots.toolmaterial.IndRevToolMaterials;
-import me.luligabi.basicaiots.toolmaterial.TechRebornToolMaterials;
+import me.luligabi.basicaiots.common.item.AiotToolItem;
+import me.luligabi.basicaiots.common.BasicAiots;
+import me.luligabi.basicaiots.common.item.IndustrialRevolutionTechRebornToolItem;
+import me.luligabi.basicaiots.common.item.IndustrialRevolutionToolItem;
+import me.luligabi.basicaiots.common.item.TechRebornToolItem;
+import me.luligabi.basicaiots.common.toolmaterial.IndRevToolMaterials;
+import me.luligabi.basicaiots.common.toolmaterial.TechRebornToolMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterials;

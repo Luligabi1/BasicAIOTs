@@ -17,7 +17,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.luligabi.basicaiots.BasicAiots"
+      "me.luligabi.basicaiots.common.BasicAiots"
+    ],
+    "rei_plugins": [
+      "me.luligabi.basicaiots.client.compat.ReiPlugin"
     ]
   },
   "mixins": [
