@@ -18,6 +18,6 @@ public abstract class MiningToolItemMixin {
     public void getMiningSpeedMultiplier(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
         MiningToolItem mti = ((MiningToolItem) (Object) this);
 
-        cir.setReturnValue(((MiningToolAccessor) mti).getEffectiveBlocks().contains(state.getBlock()) || mti instanceof AiotToolItem ? ((MiningToolAccessor) mti).getMiningSpeed() : 1.0F);
+        cir.setReturnValue(state.isIn(((MiningToolAccessor) mti).getEffectiveBlocks()) || mti instanceof AiotToolItem ? ((MiningToolAccessor) mti).getMiningSpeed() : 1.0F);
     }
 }
