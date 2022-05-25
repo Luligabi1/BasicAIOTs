@@ -1,12 +1,12 @@
 package me.luligabi.basicaiots.common.item;
 
-import com.google.common.collect.BiMap;
 import com.mojang.datafixers.util.Pair;
 import me.luligabi.basicaiots.mixin.AxeItemAccessor;
 import me.luligabi.basicaiots.mixin.HoeItemAccessor;
 import me.luligabi.basicaiots.mixin.ShovelItemAccessor;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -44,7 +44,7 @@ public class AiotToolItem extends MiningToolItem {
 
         Optional<BlockState> optional = getStrippedState(blockState);
         Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(blockState);
-        Optional<BlockState> optional3 = Optional.ofNullable((Block)((BiMap) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map((waxedBlock) -> waxedBlock.getStateWithProperties(blockState));
+        Optional<BlockState> optional3 = Optional.ofNullable(HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get().get(blockState.getBlock())).map((waxedBlock) -> waxedBlock.getStateWithProperties(blockState));
         ItemStack itemStack = context.getStack();
         Optional<BlockState> optional4 = Optional.empty();
         if (optional.isPresent()) {
@@ -131,6 +131,11 @@ public class AiotToolItem extends MiningToolItem {
         } else {
             return (material == Material.METAL || material == Material.REPAIR_STATION || material == Material.STONE) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
         }
+    }
+
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        stack.damage(1, attacker, (e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+        return true;
     }
 
     private Optional<BlockState> getStrippedState(BlockState state) {
