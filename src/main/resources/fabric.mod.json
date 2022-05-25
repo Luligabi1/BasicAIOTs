@@ -19,7 +19,7 @@
     "main": [
       "me.luligabi.basicaiots.common.BasicAiots"
     ],
-    "rei_plugins": [
+    "rei_client": [
       "me.luligabi.basicaiots.client.compat.ReiPlugin"
     ]
   },
@@ -29,7 +29,7 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.18.x"
+    "minecraft": "1.19.x"
   },
   "suggests": {
     "indrev": "*",
